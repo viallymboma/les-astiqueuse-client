@@ -91,7 +91,7 @@ const LoginPage = () => {
               <button className={`font-bold ${
                 theme === 'dark' ? 'text-[#61c4f1] hover:text-[#a4d3f1]' : 'text-[#307aa8] hover:text-[#6eaad0]'
               } transition-colors`}>
-                S'inscrire
+                S&apos;inscrire
               </button>
             </p>
           </div>

@@ -1,4 +1,4 @@
-import { Home, Droplet, Phone, Info, LogIn, UserPlus, Calendar, Menu, X, Sun, Moon, Sparkles, Clock, Shield, Award, CheckCircle, ArrowRight, Star, MapPin, Mail, Facebook, Instagram, Twitter } from 'lucide-react';
+import { Home, Sparkles, Clock, Shield } from 'lucide-react';
 
 
 export const services = [

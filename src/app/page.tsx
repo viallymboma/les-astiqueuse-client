@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
 const HomePage = () => {
   const { theme } = useStore();
   const [currentSlide, setCurrentSlide] = useState(0);
+  console.log(currentSlide)
 
   useEffect(() => {
     const timer = setInterval(() => {

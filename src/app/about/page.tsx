@@ -31,7 +31,7 @@ const AboutPage = () => {
                 Notre Mission
               </h2>
               <p className={`text-xl leading-relaxed ${theme === 'dark' ? 'text-[#b2d2e6]' : 'text-[#6d89a3]'}`}>
-                Chez LesAstiqueuses, nous croyons que chaque espace mérite d'être impeccable. Notre mission est de fournir des services de nettoyage exceptionnels qui transforment votre environnement en un lieu sain, propre et accueillant. Avec plus de 10 ans d'expérience, nous combinons expertise professionnelle et produits écologiques pour des résultats qui dépassent vos attentes.
+                Chez LesAstiqueuses, nous croyons que chaque espace mérite d&apos;être impeccable. Notre mission est de fournir des services de nettoyage exceptionnels qui transforment votre environnement en un lieu sain, propre et accueillant. Avec plus de 10 ans d&apos;expérience, nous combinons expertise professionnelle et produits écologiques pour des résultats qui dépassent vos attentes.
               </p>
             </div>
   

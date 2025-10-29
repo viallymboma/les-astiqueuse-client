@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Home, Droplet, Phone, Info, LogIn, UserPlus, Menu, X, Sun, Moon, Sparkles } from 'lucide-react';
+import { Home, Droplet, Phone, Info, LogIn, Menu, X, Sun, Moon, Sparkles } from 'lucide-react';
 import { useStore } from '@/store/useStore';
 
 export default function Navigation() {
@@ -117,7 +117,7 @@ export default function Navigation() {
                       : 'bg-gradient-to-r from-[#6eaad0] to-[#61c4f1] text-white hover:shadow-lg hover:shadow-[#6eaad0]/30'
                   }`}
                 >
-                  S'inscrire
+                  S&apos;inscrire
                 </Link>
               </>
             )}
