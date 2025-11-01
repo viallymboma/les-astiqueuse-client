@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  nextjs-app-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: cleanpro-app-dev
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - /app/.next
+    environment:
+      - NODE_ENV=development
+      - NEXT_PUBLIC_API_URL=https://www.dev.lesastiqueuses.fr
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
