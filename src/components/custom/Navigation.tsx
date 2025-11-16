@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Home, Droplet, Phone, Info, LogIn, Menu, X, Sun, Moon, Sparkles } from 'lucide-react';
 import { useStore } from '@/store/useStore';
+import keycloak from '@/lib/keycloak';
 
 export default function Navigation() {
   const pathname = usePathname();
@@ -17,6 +18,14 @@ export default function Navigation() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const login = () => {
+    keycloak.init({
+      onLoad: "login-required",
+      pkceMethod: "S256",
+    });
+  };
+
 
   const navItems = [
     { href: '/', label: 'Accueil', icon: Home },
@@ -98,7 +107,18 @@ export default function Navigation() {
               </>
             ) : (
               <>
-                <Link
+              <button
+                  onClick={login}
+                  className={`px-5 py-2.5 rounded-xl font-medium transition-all duration-300 flex items-center space-x-2 ${
+                    theme === 'dark'
+                      ? 'text-[#b2d2e6] hover:bg-white/10'
+                      : 'text-[#6d89a3] hover:bg-[#6eaad0]/10'
+                  }`}
+                  >
+                    <LogIn className="w-4 h-4" />
+                  <span>Connexion</span>
+              </button>
+                {/* <Link
                   href="/login"
                   className={`px-5 py-2.5 rounded-xl font-medium transition-all duration-300 flex items-center space-x-2 ${
                     theme === 'dark'
@@ -108,7 +128,7 @@ export default function Navigation() {
                 >
                   <LogIn className="w-4 h-4" />
                   <span>Connexion</span>
-                </Link>
+                </Link> */}
                 <Link
                   href="/register"
                   className={`px-5 py-2.5 rounded-xl font-medium transition-all duration-300 ${

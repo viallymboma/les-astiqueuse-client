@@ -1,0 +1,44 @@
+{
+    "firstName": "Ariel Desir",
+    "lastName": "Mboma",
+    "email": "viallymboma@gmail.com",
+    "phone": "695500474",
+    "phoneVerified": false,
+    "googleAccount": true,
+    "type": "INDIVIDUAL",
+    "address": "Villiers-sur-Marne",
+    "city": "Villiers-sur-Marne",
+    "postalCode": "94350",
+    "inseeCode": "94079",
+    "country": "France",
+    "reservation": {
+        "serviceId": 1,
+        "propertyData": {
+            "type": "APARTMENT",
+            "name": "Propriété Mboma",
+            "address": "Villiers-sur-Marne",
+            "city": "Villiers-sur-Marne",
+            "postalCode": "94350",
+            "inseeCode": "94079",
+            "country": "France",
+            "surfaceArea": 100,
+            "roomCount": 10,
+            "contactName": "Ariel Desir Mboma",
+            "contactPhone": "695500474",
+            "accessInstructions": {}
+        },
+        "interventionDate": "2025-11-26",
+        "startTime": "09:00",
+        "duration": 180,
+        "frequency": "ONE_TIME",
+        "days": [],
+        "selectedOptionIds": [
+            1,
+            3
+        ],
+        "notes": "ras"
+    },
+    "marketingEmailConsent": true,
+    "marketingSmsConsent": true,
+    "consentVersion": "1.0"
+}
