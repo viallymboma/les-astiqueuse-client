@@ -10,4 +10,24 @@ export function setupKeycloakEvents() {
     localStorage.setItem("access_token", keycloak.token!);
     localStorage.setItem("refresh_token", keycloak.refreshToken!);
   };
+
+  keycloak.onAuthLogout = () => {
+    localStorage.removeItem("access_token");
+    localStorage.removeItem("refresh_token");
+  };
 }
+
+
+// import keycloak from "./keycloak";
+
+// export function setupKeycloakEvents() {
+//   keycloak.onAuthSuccess = () => {
+//     localStorage.setItem("access_token", keycloak.token!);
+//     localStorage.setItem("refresh_token", keycloak.refreshToken!);
+//   };
+
+//   keycloak.onAuthRefreshSuccess = () => {
+//     localStorage.setItem("access_token", keycloak.token!);
+//     localStorage.setItem("refresh_token", keycloak.refreshToken!);
+//   };
+// }
