@@ -4,6 +4,11 @@ import keycloak from "@/lib/keycloak";
 
 export default function LoginPage() {
   const login = () => {
+    if (!keycloak) {
+      console.error("Keycloak not loaded yet!");
+      return;
+    }
+
     keycloak.login({
       redirectUri: window.location.origin,
     });
@@ -13,15 +18,38 @@ export default function LoginPage() {
 
   return (
     <div className="flex min-h-screen items-center justify-center">
-      <button
-        className="px-4 py-2 bg-blue-600 text-white rounded"
-        onClick={login}
-      >
-        Connexion
-      </button>
+    <button className="px-4 py-2 bg-blue-600 text-white rounded" onClick={login}>
+      Connexion
+    </button>
     </div>
   );
 }
+
+
+// "use client";
+
+// import keycloak from "@/lib/keycloak";
+
+// export default function LoginPage() {
+//   const login = () => {
+//     keycloak.login({
+//       redirectUri: window.location.origin,
+//     });
+
+//     document.cookie = "kc_client_authenticated=true; path=/;";
+//   };
+
+//   return (
+//     <div className="flex min-h-screen items-center justify-center">
+//       <button
+//         className="px-4 py-2 bg-blue-600 text-white rounded"
+//         onClick={login}
+//       >
+//         Connexion
+//       </button>
+//     </div>
+//   );
+// }
 
 
 // "use client"

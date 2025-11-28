@@ -116,7 +116,7 @@ export default function Navigation() {
                   }`}
                   >
                     <LogIn className="w-4 h-4" />
-                  <span>Connexion ++++++++</span>
+                  <span>Connexion </span>
               </button>
                 {/* <Link
                   href="/login"
